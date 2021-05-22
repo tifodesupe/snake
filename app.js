@@ -55,7 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const autoPega = cuadrados[nuevaCabeza] && cuadrados[nuevaCabeza].classList.contains("snake")
     if(pegaAbajo|| pegaArriba|| pegaIzquierda|| pegaDerecha|| autoPega){
       clearInterval(intervalo)
+      if (puntos <= 3) {
+        alert("huevo podrido")
+      }else{
       alert("perdiste")
+      }
       return
     }
 
